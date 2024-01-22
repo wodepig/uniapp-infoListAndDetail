@@ -1,7 +1,7 @@
 <template>
 	<view >
 		<h2 style="text-align: center;">{{item.title}}</h2>
-		<mp-html :scroll-table="true" :content="item.content" />
+		<mp-html :tag-style="tagStyle" :scroll-table="true" :content="item.content" />
 	
 	</view>
 	
@@ -19,6 +19,11 @@
 		},
 		data() {
 			return {
+				tagStyle: {
+				   table: 'border-top: 1px solid gray; border-left: 1px solid gray;',
+				   th: 'background-color: #f5f2f0;border-right: 1px solid gray; border-bottom: 1px solid gray;',
+				   td: 'border-right: 1px solid gray; border-bottom: 1px solid gray;'
+				},
 				item: {},
 			}
 		},
